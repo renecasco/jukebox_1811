@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
 
-  resources :awards, only: [:index]
+  resources :awards, only: [:index, :show]
 
   resources :carts, only: [:create]
   resources :orders, only: [:create]
@@ -20,5 +20,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories, only: [:index]
+    resources :awards, only: [:new, :create]
   end
 end

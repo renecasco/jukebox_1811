@@ -1,0 +1,14 @@
+<% @awards.each do |award| %>
+  <section id = "award-<%= award.id %>">
+    <%= link_to award.name, award_path(award) %>
+  </section>
+<% end %>
+
+<% if current_admin? %>
+  <h3>Add New Award</h3>
+  <%= form_for [:admin, @award] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
