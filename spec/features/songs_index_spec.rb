@@ -5,6 +5,8 @@ RSpec.describe 'when visitor visits songs index', type: :feature do
     @journey = Artist.create(name: 'Journey')
     @song_1 = @journey.songs.create(title: "Don't Stop Believin'", length: 345, play_count: 13)
     @song_2 = @journey.songs.create(title: "This Must Be the Place", length: 678, play_count: 5)
+
+    
   end
   it 'can see all songs' do
     visit songs_path
