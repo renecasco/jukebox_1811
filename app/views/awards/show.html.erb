@@ -1,0 +1,4 @@
+<h1> <%= @award.name %></h1>
+<% @award.songs.each do |song| %>
+  <%= song.title %>
+<% end %>
